@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     environment {
         imagename = "himan14/docker-jenkins"
         registryCredential = 'dockerhub'
