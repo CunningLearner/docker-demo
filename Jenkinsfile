@@ -9,7 +9,7 @@ pipeline {
         stage("Cloning Git") {
             steps {
                 echo "========executing Cloning Stage========"
-                git url: 'https://github.com/CunningLearner/docker-demo.git', branch: 'master'
+                git ([url: 'https://github.com/CunningLearner/docker-demo.git', branch: 'master'])
             }
             post{
                 always{
