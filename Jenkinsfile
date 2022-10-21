@@ -28,6 +28,7 @@ pipeline {
                 script {
                     dockerImage = docker.build imagename
                 }
+            }
             post{
                 always{
                     echo "========always========"
@@ -62,15 +63,5 @@ pipeline {
             }
         }
     }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
-        }
-    }
+
 }
